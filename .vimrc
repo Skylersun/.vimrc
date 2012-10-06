@@ -30,7 +30,7 @@ set showmatch
 set incsearch
 set nohlsearch
 
-set wrap
+set nowrap
 set nolist
 
 sy on
