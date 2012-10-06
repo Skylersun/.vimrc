@@ -30,7 +30,9 @@ set showmatch
 set incsearch
 set nohlsearch
 
-set nowrap
+set nolinebreak
+set textwidth=0
+set wrap
 set nolist
 
 sy on
