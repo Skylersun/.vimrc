@@ -14,7 +14,7 @@ For convenience, don't copy the `.vimrc` file to `~/` directly. Just clone this 
 ===============
 * **colorscheme**:
 
-        solarized (backgroud=dark)
+        solarized (background=dark)
 
 * **font**:
 
