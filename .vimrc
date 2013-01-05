@@ -22,7 +22,6 @@ set laststatus=2
 set scrolloff=6
 let g:solarized_termcolors=256
 set t_Co=256
-colorscheme solarized
 set background=dark
 set guifont=Monaco:h16
 
