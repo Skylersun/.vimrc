@@ -35,6 +35,7 @@ set wrap
 set nolist
 
 sy on
+filetype on
 filetype plugin indent on
 filetype plugin on
 filetype indent on
@@ -69,13 +70,18 @@ if (g:isWin)
     map <C-CR> <esc>$a<CR>
     imap <C-CR> <esc>$a<CR>
 else
-    map <D-R> <esc>:w<CR>:!python2.7 %<CR>
-    map <D-r> <esc>:w<CR>:!python3 %<CR>
     map <D-e> <esc>:NERDTree<CR>
     map <D-CR> <esc>$a<CR>
-    map <D-S-CR> <esc>$a:<CR>
     imap <D-CR> <esc>$a<CR>
-    imap <D-S-CR> <esc>$a:<CR>
+    autocmd FileType python nmap <D-r> <esc>:w<CR>:!python %<CR>
+    autocmd FileType c nmap <D-r> <esc>:w<CR>:!gcc % -o %:r && ./%:r<CR>
+    autocmd FileType cpp nmap <D-r> <esc>:w<CR>:!g++ % -o %:r && ./%:r<CR>
+    autocmd FileType python map <D-S-CR> <esc>$a:<CR>
+    autocmd FileType python imap <D-S-CR> <esc>$a:<CR>
+    autocmd FileType c map <D-S-CR> <esc>$a;<CR>
+    autocmd FileType c imap <D-S-CR> <esc>$a;<CR>
+    autocmd FileType cpp map <D-S-CR> <esc>$a;<CR>
+    autocmd FileType cpp imap <D-S-CR> <esc>$a;<CR>
 endif
 
 if (g:isWin)
