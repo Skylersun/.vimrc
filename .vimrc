@@ -4,6 +4,7 @@ else
     let g:isWin = 0 
 endif
 
+colorscheme solarized
 set nocompatible
 set shortmess=atI
 set go=
